@@ -7,15 +7,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/css/style.css"></script>
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+    <!--<script src="assets/css/style.css"></script>-->
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    
+   
     <title>By Odin's Beer'd</title>
 
 </head>
 
 <body>
-
-    <script src="assets/js/script.js"></script>
+    
+    
+        <div id="map"></div>
+    
+        <!--
+          The `defer` attribute causes the callback to execute after the full HTML
+          document has been parsed. For non-blocking uses, avoiding race conditions,
+          and consistent behavior across browsers, consider loading using Promises.
+          See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+          for more information.
+          -->
+       <!-- <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuUcFNsb6taVvWzdtzslQostyDOlc-U1c"></script>-->
+          <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuUcFNsb6taVvWzdtzslQostyDOlc-U1c"defer>
+</script>
+      
+        <script src="./assets/js/script.js"></script>
+       
 </body>
 
 </html>
+
+
+
+
+
