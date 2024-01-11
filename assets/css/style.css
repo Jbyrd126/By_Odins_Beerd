@@ -1,0 +1,27 @@
+body {
+    background-color: grey;
+}
+
+#hero {
+    display: flex;
+    margin-top: -125px;
+    background-image: url(../images/By-Odinos-Beerd.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: auto;
+
+    background-position-x: 1625px;
+    background-position-y: -45px;
+
+}
+
+
+.top {
+    font-family: 'IM Fell English',
+        serif;
+
+    font-size: 75px;
+    color: azure;
+    padding-left: 10px;
+
+}
