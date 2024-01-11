@@ -6,7 +6,7 @@ function makeApiRequest() {
         .catch(error => console.error(error));
 }
 
-const fetchButton = document.querySelector('.micro');
+const fetchButton = document.querySelector('#choice');
 
 fetchButton.addEventListener('click', async () => {
     const name = 'micros';
@@ -26,5 +26,5 @@ fetchButton.addEventListener('click', async () => {
 });
 
 
-loadMapScript();
+// loadMapScript();
 makeApiRequest();
