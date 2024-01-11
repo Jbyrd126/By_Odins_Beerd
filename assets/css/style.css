@@ -19,11 +19,11 @@ body {
 }
 
 
-.top {
-    font-family: 'IM Fell English',  serif;
-    font-size: 75px;
+#top {
+
+    font-family: 'IM Fell English', serif;
     color: azure;
-    padding-left: 10px;
+    padding-left: 15px;
 
 }
 
