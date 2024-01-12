@@ -1,25 +1,15 @@
 body {
-
+    background-color: #eaac60;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* #hero {
-    display: flex;
-    margin-top: -125px;
-    background-image: url(../images/By-Odinos-Beerd.png);
-    height: 100vh;
-    background-repeat: no-repeat;
-    width: auto;
-    background-position-x: 1625px;
-    background-position-y: -45px;
-} */
 
 h1 {
     font-family: 'IM Fell English SC', serif;
 
-    color: azure;
+    color: #b56e2b;
     padding-left: 15px;
 }
 
@@ -37,4 +27,23 @@ h1 {
 
 #choice {
     font-family: 'IM Fell English SC', serif;
+}
+
+#logo {
+    flex-shrink: 2;
+    position: relative;
+    top: -125px;
+    left: 125px;
+    max-width: 600px;
+    max-height: 600px;
+    width: 600px;
+    height: 600px;
+}
+
+.frog {
+    color: #b56e2b;
+    font-family: 'IM Fell English SC',
+        serif;
+    font-size: larger;
+
 }
