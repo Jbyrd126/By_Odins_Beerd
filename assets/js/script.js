@@ -1,6 +1,7 @@
 let map;
 let lat;
 let lng;
+let marker = [];
 // locate you.
 //google maps functionality
 function initMap(latitude, longitude) {
@@ -8,7 +9,7 @@ function initMap(latitude, longitude) {
     map = new google.maps.Map(document.getElementById("map"), {
 
         center: { lat: latitude, lng: longitude },
-        zoom: 10,
+        zoom: 7,
     });
     //adding home marker
     new google.maps.Marker({
@@ -38,10 +39,125 @@ if (navigator.geolocation) {
     handleLocationError();
 };
 
-const fetchButton = document.querySelector('#choice');
 
-fetchButton.addEventListener('click', async () => {
-    const name = 'micros';
+function handleLocationError() {
+
+
+    alert("Error: The Geolocation service failed.")
+
+};
+function makeApiRequest(lat, lng) {
+
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_dist=${lat},${lng}&per_page=8`)
+        .then(response => response.json())
+        //.then(data => console.log(data))
+        .then((data) => {
+            // Loop through the breweries data
+            data.forEach((brewery) => {
+                // Extract latitude and longitude coordinates
+                const { latitude, longitude } = brewery;
+                for (var i = 0; i < marker.length; i++) {
+
+                    marker[i].setMap(null);
+                }
+
+                // Create a new marker for each brewery location
+                const marker = new google.maps.Marker({
+                    position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+                    map: map, // Add the marker to the map
+                    title: brewery.name, // Set the marker title
+                });
+
+            });
+            console.log(data)
+        })
+
+
+
+
+        .catch(error => console.error(error));
+
+
+
+};
+
+const fetchChoice = document.querySelector('#choice');
+const fetchChoice1 = document.querySelector('#choice1');
+const fetchChoice2 = document.querySelector('#choice2');
+const fetchChoice3 = document.querySelector('#choice3');
+const fetchChoice4 = document.querySelector('#choice4');
+
+
+
+fetchChoice.addEventListener('click', async () => {
+    const name = 'brewpub';
+    console.log(name);
+
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=brewpub&by_dist=${lat},${lng}&per_page=8`)
+        .then(response => response.json())
+        //.then(data => console.log(data))
+        .then((data) => {
+            // Loop through the breweries data
+            data.forEach((brewery) => {
+                // Extract latitude and longitude coordinates
+                const { latitude, longitude } = brewery;
+
+                // Create a new marker for each brewery location
+                const marker = new google.maps.Marker({
+                    position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+                    map: map, // Add the marker to the map
+                    title: brewery.name, // Set the marker title
+                });
+            });
+
+
+
+
+
+            // Pull out the names of the breweries
+            const breweryNames = data.map((brewery) => brewery.name);
+
+            // Log the brewery names in the console
+            console.log(breweryNames);
+        });
+})
+
+fetchChoice1.addEventListener('click', async () => {
+    const name = 'local';
+    console.log(name);
+
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=regional&by_dist=${lat},${lng}&per_page=8`)
+        .then(response => response.json())
+        // .then(data => console.log(data))
+        .then((data) => {
+            console.log(data);
+            // Loop through the breweries data
+            data.forEach((brewery) => {
+                // Extract latitude and longitude coordinates
+                const { latitude, longitude } = brewery;
+
+                // Create a new marker for each brewery location
+                const marker = new google.maps.Marker({
+                    position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+                    map: map, // Add the marker to the map
+                    title: brewery.name, // Set the marker title
+                });
+            });
+
+
+
+
+
+            // Pull out the names of the breweries
+            const breweryNames = data.map((brewery) => brewery.name);
+
+            // Log the brewery names in the console
+            console.log(breweryNames);
+        });
+})
+
+fetchChoice2.addEventListener('click', async () => {
+    const name = 'micro';
     console.log(name);
 
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=micro&by_dist=${lat},${lng}&per_page=8`)
@@ -73,15 +189,11 @@ fetchButton.addEventListener('click', async () => {
         });
 })
 
-function handleLocationError() {
+fetchChoice3.addEventListener('click', async () => {
+    const name = 'corporate';
+    console.log(name);
 
-
-    alert("Error: The Geolocation service failed.")
-
-};
-function makeApiRequest(lat, lng) {
-
-    fetch(`https://api.openbrewerydb.org/v1/breweries?by_dist=${lat},${lng}&per_page=8`)
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=large&by_dist=${lat},${lng}&per_page=8`)
         .then(response => response.json())
         //.then(data => console.log(data))
         .then((data) => {
@@ -96,106 +208,50 @@ function makeApiRequest(lat, lng) {
                     map: map, // Add the marker to the map
                     title: brewery.name, // Set the marker title
                 });
-
             });
-            console.log(data)
-        })
 
 
 
 
-        .catch(error => console.error(error));
 
+            // Pull out the names of the breweries
+            const breweryNames = data.map((brewery) => brewery.name);
 
-
-};
-
-const fetchChoice = document.querySelector('#choice');
-const fetchChoice1 = document.querySelector('#choice1');
-const fetchChoice2 = document.querySelector('#choice2');
-const fetchChoice3 = document.querySelector('#choice3');
-const fetchChoice4 = document.querySelector('#choice4');
-
-fetchChoice.addEventListener('click', async () => {
-    const name = 'brewpubs';
-    console.log(name);
-
-    const response = await fetch(
-        `https://api.openbrewerydb.org/v1/breweries?by_type=brewpub`
-    );
-
-    const data = await response.json();
-
-    // Pull out the names of the breweries
-    const breweryNames = data.map((brewery) => brewery.name);
-
-    // Log the brewery names in the console
-    console.log(breweryNames);
-});
-
-fetchChoice1.addEventListener('click', async () => {
-    const name = 'local';
-    console.log(name);
-
-    const response = await fetch(
-        `https://api.openbrewerydb.org/v1/breweries?by_type=regional`
-    );
-
-    const data = await response.json();
-
-    // Pull out the names of the breweries
-    const breweryNames = data.map((brewery) => brewery.name);
-
-    // Log the brewery names in the console
-    console.log(breweryNames);
-});
-fetchChoice2.addEventListener('click', async () => {
-    const name = 'micro';
-    console.log(name);
-
-    const response = await fetch(
-        `https://api.openbrewerydb.org/v1/breweries?by_type=micro`
-    );
-
-    const data = await response.json();
-
-    // Pull out the names of the breweries
-    const breweryNames = data.map((brewery) => brewery.name);
-
-    // Log the brewery names in the console
-    console.log(breweryNames);
-});
-
-fetchChoice3.addEventListener('click', async () => {
-    const name = 'large';
-    console.log(name);
-
-    const response = await fetch(
-        `https://api.openbrewerydb.org/v1/breweries?by_type=large`
-    );
-
-    const data = await response.json();
-
-    // Pull out the names of the breweries
-    const breweryNames = data.map((brewery) => brewery.name);
-
-    // Log the brewery names in the console
-    console.log(breweryNames);
-});
-
+            // Log the brewery names in the console
+            console.log(breweryNames);
+        });
+})
 fetchChoice4.addEventListener('click', async () => {
-    const name = 'local';
+    const name = 'contract';
     console.log(name);
 
-    const response = await fetch(
-        `https://api.openbrewerydb.org/v1/breweries?by_type=bar`
-    );
-    main
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=contract&by_dist=${lat},${lng}&per_page=8`)
+        .then(response => response.json())
+        //.then(data => console.log(data))
+        .then((data) => {
+            // Loop through the breweries data
+            data.forEach((brewery) => {
+                // Extract latitude and longitude coordinates
+                const { latitude, longitude } = brewery;
+
+                // Create a new marker for each brewery location
+                const marker = new google.maps.Marker({
+                    position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+                    map: map, // Add the marker to the map
+                    title: brewery.name, // Set the marker title
+                });
+            });
 
 
-        .catch(error => console.error(error));
 
 
 
-});
+            // Pull out the names of the breweries
+            const breweryNames = data.map((brewery) => brewery.name);
+
+            // Log the brewery names in the console
+            console.log(breweryNames);
+        });
+})
+
 //makeApiRequest(lat, lng);
