@@ -1,3 +1,4 @@
+
 body {
     background-color: #eaac60;
     height: 100%;
@@ -6,28 +7,39 @@ body {
 }
 
 
+
+#top {
+  font-family: "IM Fell English", serif;
+  color: #b9853c;
+  padding-left: 15px;
+}
 h1 {
+
     font-family: 'IM Fell English SC', serif;
 
     color: #b56e2b;
     padding-left: 15px;
+
+  font-family: "IM Fell English", serif;
+  color: azure;
+  padding-left: 15px;
+
 }
 
 #map {
-    height: 600px;
-    display: flexbox;
-    align-items: flex-end;
-    padding: 10px;
-    width: 600px;
-    border-style: solid;
-    border-width: 1px;
+  height: 600px;
+   display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+   padding: 10px; 
+   width: 600px; 
+  border-style: solid;
+  border-width: 1px;
 }
-
-
-
 #choice {
     font-family: 'IM Fell English SC', serif;
 }
+
 
 #logo {
     flex-shrink: 2;
@@ -47,3 +59,5 @@ h1 {
     font-size: larger;
 
 }
+
+
