@@ -1,9 +1,8 @@
 body {
-    background-color: grey;
+
     height: 100%;
     margin: 0;
     padding: 0;
-
 }
 
 #hero {
@@ -15,16 +14,13 @@ body {
     width: auto;
     background-position-x: 1625px;
     background-position-y: -45px;
-
 }
 
-
 h1 {
+    font-family: 'IM Fell English SC', serif;
 
-    font-family: 'IM Fell English', serif;
     color: azure;
     padding-left: 15px;
-
 }
 
 #map {
