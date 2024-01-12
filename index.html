@@ -1,33 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/reset.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>By Odin's Beer'd</title>
-</head>
+  </head>
+
+  <body>
+    <header class="py-2 h-[100px] headers">
+      <h1 id="top" class="text-6xl font-bold p-1">Lets get sloshed</h1>
+    </header>
+
+    <div>
+      <div class="flex cols-3 gap-4 p-2">
+        <div class="col-span-2 p-4 w-1/3 max-h-full champagne rounded-md">
+          <h2 class="text-lg font-bold">Selection</h2>
+          <div class="my-3">
+            <button
+              id="choice"
+              class="bg-slate-800 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mt-2 w-300px nav-buttons"
+            >
+              Brewpub
+            </button>
+            <div>
+              <button
+                id="choice1"
+                class="bg-slate-800 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mt-2 nav-buttons"
+              >
+                Local Brewery
+              </button>
+            </div>
+            <div>
+              <button
+                id="choice2"
+                class="bg-slate-800 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mt-2 nav-buttons"
+              >
+                Micro Brewery
+              </button>
+            </div>
+            <div>
+              <button
+                id="choice3"
+                class="bg-slate-800 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mt-2 nav-buttons"
+              >
+                Corporate Brewer
+              </button>
+            </div>
+            <div>
+              <button
+                id="choice4"
+                class="bg-slate-800 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mt-2 nav-buttons"
+              >
+                Dive Bars
+              </button>
+            </div>
+          </div>
 
 
 <body class="bg-gray-500">
 
-    <header class="text-white py-4 bg-gradient-to-r from-slate-800 from-10% via-gray-600 via-30% to-gray-500 to-70%">
-        <div class="container mx-1 px-4 ">
-            <h1 class="text-6xl">Let's get sloshed <span><a
-                        href="https://www.youtube.com/watch?v=pnMiV2Ykw9E">frændi</a></span>!</h1>
-
         </div>
-    </header>
-
-    <div class="">
+       
+       <div class="">
         <div class="h-screen flex cols-3 gap-4">
             <div class="col-span-2 p-4 w-1/3 h-3/4">
                 <h2 class="text-lg font-bold">Fancy a pint and a sausage?</h2>
@@ -65,6 +117,30 @@
                 </div>
 
 
+         
+        </div>
+        
+
+
+         
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 m-6">
+      <div class="rounded-md" id="map"></div>
+
+      <div class="rounded-md champagne p-4">
+        <h3 class="text-lg font-bold">weather</h3>
+      </div>
+    </div>
+    <footer class="grid grid-cols-3 gap-4 headers">
+      <a href="https://github.com/DDesta25">Daniel</a>
+      <a href=""></a>
+      <a href=""></a>
+    </footer>
+    <!-- </div>   
+    </div> -->
+
             </div>
             <div class="col-span-2  p-4 w-1/3">
                 <h2 class="text-lg list font-bold">list</h2>
@@ -99,6 +175,6 @@
     <script src="./assets/js/script.js"></script>
 
 
-</body>
 
+  </body>
 </html>
