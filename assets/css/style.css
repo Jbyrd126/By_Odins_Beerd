@@ -1,38 +1,55 @@
-body {
-    background-color: grey;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+/* khaki #BAA898
+champange #EEE0CB
+ */
 
+body {
+  background-color: #baa898;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.champagne {
+  background-color: #eee0cb;
+}
+.lapis {
+  background-color: #dcbe93;
+}
+.goldenrod {
+  background-color: #b9853c;
+}
+.headers {
+  background-color: black !important;
+  color: #b9853c !important;
+}
+.nav-buttons {
+  background-color: black !important;
+  color: #b9853c !important;
 }
 
 #hero {
-    display: flex;
-    margin-top: -125px;
-    background-image: url(../images/By-Odinos-Beerd.png);
-    height: 100vh;
-    background-repeat: no-repeat;
-    width: auto;
-    background-position-x: 1625px;
-    background-position-y: -45px;
-
+  display: flex;
+  margin-top: -125px;
+  background-image: url(../images/By-Odinos-Beerd.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: auto;
+  background-position-x: 1625px;
+  background-position-y: -45px;
 }
 
-
 #top {
-
-    font-family: 'IM Fell English', serif;
-    color: azure;
-    padding-left: 15px;
-
+  font-family: "IM Fell English", serif;
+  color: #b9853c;
+  padding-left: 15px;
 }
 
 #map {
-    height: 600px;
-    display: flexbox;
-    align-items: flex-end;
-    padding: 10px;
-    width: 600px;
-    border-style: solid;
-    border-width: 1px;
+  height: 600px;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
+  /* padding: 10px; */
+  /* width: 600px; */
+  border-style: solid;
+  border-width: 1px;
 }
