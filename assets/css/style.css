@@ -1,3 +1,4 @@
+
 /* khaki #BAA898
 champange #EEE0CB
  */
@@ -7,34 +8,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-.champagne {
-  background-color: #eee0cb;
-}
-.lapis {
-  background-color: #dcbe93;
-}
-.goldenrod {
-  background-color: #b9853c;
-}
-.headers {
-  background-color: black !important;
-  color: #b9853c !important;
-}
-.nav-buttons {
-  background-color: black !important;
-  color: #b9853c !important;
-}
-
-#hero {
-  display: flex;
-  margin-top: -125px;
-  background-image: url(../images/By-Odinos-Beerd.png);
-  height: 100vh;
-  background-repeat: no-repeat;
-  width: auto;
-  background-position-x: 1625px;
-  background-position-y: -45px;
 }
 
 #top {
@@ -57,4 +30,7 @@ h1 {
   /* width: 600px; */
   border-style: solid;
   border-width: 1px;
+}
+#choice {
+    font-family: 'IM Fell English SC', serif;
 }
