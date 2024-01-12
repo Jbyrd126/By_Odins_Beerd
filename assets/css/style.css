@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-#hero {
+/* #hero {
     display: flex;
     margin-top: -125px;
     background-image: url(../images/By-Odinos-Beerd.png);
@@ -14,7 +14,7 @@ body {
     width: auto;
     background-position-x: 1625px;
     background-position-y: -45px;
-}
+} */
 
 h1 {
     font-family: 'IM Fell English SC', serif;
@@ -31,4 +31,10 @@ h1 {
     width: 600px;
     border-style: solid;
     border-width: 1px;
+}
+
+
+
+#choice {
+    font-family: 'IM Fell English SC', serif;
 }
