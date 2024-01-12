@@ -29,7 +29,7 @@ if (navigator.geolocation) {
 
             //pass position to the map
             initMap(lat, lng)
-            makeApiRequest(lat, lng);
+            //makeApiRequest(lat, lng);
         }
     );
 
@@ -44,9 +44,28 @@ fetchButton.addEventListener('click', async () => {
     const name = 'micros';
     console.log(name);
 
-    const response = await fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=micro&by_dist=${lat},${lng}&per_page=8`);
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=micro&by_dist=${lat},${lng}&per_page=8`)
+    .then(response => response.json())
+    //.then(data => console.log(data))
+    .then((data) => {
+        // Loop through the breweries data
+        data.forEach((brewery) => {
+            // Extract latitude and longitude coordinates
+            const { latitude, longitude } = brewery;
 
-    const data = await response.json();
+            // Create a new marker for each brewery location
+            const marker = new google.maps.Marker({
+                position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+                map: map, // Add the marker to the map
+                title: brewery.name, // Set the marker title
+            });
+        });
+  
+  
+  
+    // const response = await fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=micro&by_dist=${lat},${lng}&per_page=8`);
+
+   // const data = await response.json();
 
     // Pull out the names of the breweries
     const breweryNames = data.map((brewery) => brewery.name);
@@ -54,6 +73,7 @@ fetchButton.addEventListener('click', async () => {
     // Log the brewery names in the console
     console.log(breweryNames);
 });
+})
 
 function handleLocationError() {
 
@@ -61,8 +81,8 @@ function handleLocationError() {
     alert("Error: The Geolocation service failed.")
 
 };
-
 function makeApiRequest(lat, lng) {
+    
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_dist=${lat},${lng}&per_page=8`)
         .then(response => response.json())
         //.then(data => console.log(data))
@@ -71,17 +91,26 @@ function makeApiRequest(lat, lng) {
             data.forEach((brewery) => {
                 // Extract latitude and longitude coordinates
                 const { latitude, longitude } = brewery;
- mapmarkers
+               
                 // Create a new marker for each brewery location
                 const marker = new google.maps.Marker({
                     position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
                     map: map, // Add the marker to the map
                     title: brewery.name, // Set the marker title
                 });
+                
             });
             console.log(data)
         })
 
+
+
+
+        .catch(error => console.error(error));
+
+
+
+}
 
 const fetchChoice = document.querySelector('#choice');
 const fetchChoice1 = document.querySelector('#choice1');
@@ -170,7 +199,4 @@ fetchChoice4.addEventListener('click', async () => {
 
 
 
-}
-
-
-
+});
