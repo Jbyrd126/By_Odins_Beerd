@@ -223,13 +223,14 @@ fetchChoice3.addEventListener('click', async () => {
 })
 fetchChoice4.addEventListener('click', async () => {
     const name = 'contract';
+
     console.log(name);
 
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_type=contract&by_dist=${lat},${lng}&per_page=8`)
         .then(response => response.json())
         //.then(data => console.log(data))
         .then((data) => {
-            // Loop through the breweries data
+            // Loop through the breweries data hey man
             data.forEach((brewery) => {
                 // Extract latitude and longitude coordinates
                 const { latitude, longitude } = brewery;
