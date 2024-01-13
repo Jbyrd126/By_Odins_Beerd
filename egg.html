@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Full-Screen GIF with Sound</title>
+    <style>
+        html,
+        body {
+            background-image: url("assets/images/bottles.webp");
+            background-size: auto;
+
+            background-repeat: repeat;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #gifContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #gifContainer video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gifContainer">
+        <video autoplay loop>
+            <source src="assets/images/m2-res_360p.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+
+</html>
