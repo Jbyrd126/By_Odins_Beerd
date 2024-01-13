@@ -27,14 +27,13 @@ h1 {
 }
 
 #logo {
-    flex-shrink: 2;
-    position: relative;
-    top: -125px;
-    left: 125px;
-    max-width: 600px;
-    max-height: 600px;
+
+    position: absolute;
+    top: -220px;
+    left: 50px;
+
     width: 600px;
-    height: 600px;
+    height: 800px;
 }
 
 .frog {
