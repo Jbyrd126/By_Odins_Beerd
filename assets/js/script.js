@@ -98,6 +98,20 @@ fetchChoice.addEventListener("click", async () => {
 
         .then((data) => {
             console.log(data);
+
+
+
+
+            //removes images
+            const images = document.querySelectorAll('#image');
+            images.forEach(image => {
+                image.remove();
+            });
+
+
+
+
+
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
@@ -115,7 +129,7 @@ fetchChoice.addEventListener("click", async () => {
                 const breweryInfo = document.createElement("p");
 
                 // Set the text content of the paragraph to include the name, address, and phone number
-                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, Phone: ${brewery.phone}`;
+                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, City: ${brewery.city}, Phone: ${brewery.phone}`;
 
                 // Append the paragraph to the div with id "list"
                 document.getElementById("list").appendChild(breweryInfo);
@@ -134,6 +148,16 @@ fetchChoice1.addEventListener("click", async () => {
     )
         .then((response) => response.json())
         .then((data) => {
+           
+           //removes images
+           const images = document.querySelectorAll('#image');
+           images.forEach(image => {
+               image.remove();
+           });
+           
+           
+           
+           
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
@@ -177,6 +201,14 @@ fetchChoice2.addEventListener("click", async () => {
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
+            
+            //removes images
+            const images = document.querySelectorAll('#image');
+            images.forEach(image => {
+                image.remove();
+            });
+            
+            
             // Remove each p tag
             pTags.forEach((pTag) => {
                 pTag.remove();
@@ -212,6 +244,15 @@ fetchChoice3.addEventListener("click", async () => {
     )
         .then((response) => response.json())
         .then((data) => {
+           
+           
+           //removes images
+           const images = document.querySelectorAll('#image');
+           images.forEach(image => {
+               image.remove();
+           });
+           
+           
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
@@ -250,6 +291,14 @@ fetchChoice4.addEventListener("click", async () => {
         .then((data) => {
             const pTags = document.querySelectorAll("#list p");
 
+           //removes images
+           const images = document.querySelectorAll('#image');
+           images.forEach(image => {
+               image.remove();
+           });
+           
+           
+           
             // Remove each p tag
             pTags.forEach((pTag) => {
                 pTag.remove();
