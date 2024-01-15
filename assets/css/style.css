@@ -32,9 +32,9 @@ h2 {
 
 }
 
-#choice {
+/* #choice {
     font-family: "IM Fell English SC", serif;
-}
+} */
 
 #logo {
     position: absolute;
@@ -48,6 +48,12 @@ h2 {
     color: #b56e2b;
     font-family: "IM Fell English SC", serif;
     font-size: larger;
+
+}
+
+.frog:hover {
+    text-shadow: 0 0 20px #b56e2b;
+
 }
 
 .brewery-info {
@@ -60,14 +66,35 @@ h2 {
     text-align: center;
 
 
+
 }
 
-/* .custom-style {
+.scarab {
+    display: block;
+    margin-bottom: 10px;
 
 
-    background-color: #1e293b;
+    width: calc(71%);
+    height: calc(65%);
+    position: absolute;
+    top: 965px;
 
+}
 
+.beetle {
+    display: block;
+    width: calc(71%);
+    height: calc(65%);
+    position: absolute;
+    margin-bottom: 10px;
+}
 
+.custom-link {
+    text-decoration: none;
+    /* Add any other styles you want */
+}
 
-} */
+.custom-link:hover {
+    text-shadow: 0 0 15px #b56e2b;
+    /* Add a text-shadow effect on hover */
+}
