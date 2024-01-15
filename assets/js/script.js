@@ -57,30 +57,30 @@ if (navigator.geolocation) {
 function handleLocationError() {
     alert("Error: The Geolocation service failed.");
 }
-function makeApiRequest(lat, lng) {
-    fetch(
-        `https://api.openbrewerydb.org/v1/breweries?by_dist=${lat},${lng}&per_page=8`
-    )
-        .then((response) => response.json())
-        //.then(data => console.log(data))
-        .then((data) => {
-            // Loop through the breweries data
-            data.forEach((brewery) => {
-                // Extract latitude and longitude coordinates
-                const { latitude, longitude } = brewery;
+// function makeApiRequest(lat, lng) {
+//     fetch(
+//         `https://api.openbrewerydb.org/v1/breweries?by_dist=${lat},${lng}&per_page=8`
+//     )
+//         .then((response) => response.json())
+//         //.then(data => console.log(data))
+//         .then((data) => {
+//             // Loop through the breweries data
+//             data.forEach((brewery) => {
+//                 // Extract latitude and longitude coordinates
+//                 const { latitude, longitude } = brewery;
 
-                // Create a new marker for each brewery location
-                const marker = new google.maps.Marker({
-                    position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
-                    map: map, // Add the marker to the map
-                    title: brewery.name, // Set the marker title
-                });
-            });
-            console.log(data);
-        })
+//                 // Create a new marker for each brewery location
+//                 const marker = new google.maps.Marker({
+//                     position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+//                     map: map, // Add the marker to the map
+//                     title: brewery.name, // Set the marker title
+//                 });
+//             });
+//             console.log(data);
+//         })
 
-        .catch((error) => console.error(error));
-}
+//         .catch((error) => console.error(error));
+// }
 
 const fetchChoice = document.querySelector("#choice");
 const fetchChoice1 = document.querySelector("#choice1");
@@ -140,6 +140,13 @@ fetchChoice.addEventListener("click", async () => {
                 const breweryPhone = document.createElement("p");
                 breweryPhone.innerHTML = `${brewery.phone}<br>`;
                 breweryItem.appendChild(breweryPhone);
+
+                const breweryWebsite = document.createElement('a');
+                breweryWebsite.innerHTML = `${brewery.website_url}<br>`;
+                breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
+                breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryItem.appendChild(breweryWebsite);
+
                 //styling for all the items being created and appended
                 breweryItem.classList.add("brewery-info", "custom-style");
 
@@ -202,6 +209,13 @@ fetchChoice1.addEventListener("click", async () => {
                 const breweryPhone = document.createElement("p");
                 breweryPhone.innerHTML = `${brewery.phone}<br>`;
                 breweryItem.appendChild(breweryPhone);
+
+                const breweryWebsite = document.createElement('a');
+                breweryWebsite.innerHTML = `${brewery.website_url}<br>`;
+                breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
+                breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryItem.appendChild(breweryWebsite);
+
                 //styling for all the items being created and appended
                 breweryItem.classList.add("brewery-info", "custom-style");
 
@@ -264,6 +278,13 @@ fetchChoice2.addEventListener("click", async () => {
                 const breweryPhone = document.createElement("p");
                 breweryPhone.innerHTML = `${brewery.phone}<br>`;
                 breweryItem.appendChild(breweryPhone);
+
+                const breweryWebsite = document.createElement('a');
+                breweryWebsite.innerHTML = `${brewery.website_url}<br>`;
+                breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
+                breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryItem.appendChild(breweryWebsite);
+
                 //styling for all the items being created and appended
                 breweryItem.classList.add("brewery-info", "custom-style");
 
@@ -326,17 +347,33 @@ fetchChoice3.addEventListener("click", async () => {
                 const breweryPhone = document.createElement("p");
                 breweryPhone.innerHTML = `${brewery.phone}<br>`;
                 breweryItem.appendChild(breweryPhone);
+
+                const breweryWebsite = document.createElement('a');
+                breweryWebsite.innerHTML = `${brewery.website_url}<br>`;
+                breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
+                breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryItem.appendChild(breweryWebsite)
+
+
+
+
                 //styling for all the items being created and appended
                 breweryItem.classList.add("brewery-info", "custom-style");
 
+
+
                 // Append the brewery info to the list div
                 list.appendChild(breweryItem);
-            });
+            })
+
+
+
         })
         .catch((error) => {
             console.log(error);
         });
-});
+})
+
 
 fetchChoice4.addEventListener("click", async () => {
     const name = "contract";
@@ -346,7 +383,9 @@ fetchChoice4.addEventListener("click", async () => {
     )
         .then((response) => response.json())
         .then((data) => {
+            const breweryDivs = document.querySelectorAll(".test");
             const pTags = document.querySelectorAll("#list p");
+
 
             //removes images
             const images = document.querySelectorAll("#image");
@@ -358,12 +397,17 @@ fetchChoice4.addEventListener("click", async () => {
             pTags.forEach((pTag) => {
                 pTag.remove();
             });
+
+            breweryDivs.forEach((div) => {
+                div.remove();
+            });
             initMap(lat, lng, data);
 
             // Loop through the breweries data
             data.forEach((brewery) => {
                 // Create a new div element for each brewery
                 const breweryItem = document.createElement("div");
+                breweryItem.classList.add("test")
                 breweryItem.style.borderRadius = "10px";
 
                 // Create a new p tag inside the div for the name
@@ -387,6 +431,15 @@ fetchChoice4.addEventListener("click", async () => {
                 breweryItem.appendChild(breweryPhone);
                 //styling for all the items being created and appended
                 breweryItem.classList.add("brewery-info", "custom-style");
+
+                const breweryWebsite = document.createElement('a');
+                breweryWebsite.innerHTML = `${brewery.website_url}<br>`;
+                breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
+                breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryItem.appendChild(breweryWebsite);
+
+                // Styling for all the items being created and appended
+                breweryItem.classList.add('brewery-info', 'custom-style');
 
                 // Append the brewery info to the list div
                 list.appendChild(breweryItem);
