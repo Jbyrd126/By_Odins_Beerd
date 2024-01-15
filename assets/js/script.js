@@ -99,22 +99,14 @@ fetchChoice.addEventListener("click", async () => {
         .then((data) => {
             console.log(data);
 
-
-
-
             //removes images
-            const images = document.querySelectorAll('#image');
-            images.forEach(image => {
+            const images = document.querySelectorAll("#image");
+            images.forEach((image) => {
                 image.remove();
             });
 
-
-
-
-
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
-
 
             // Remove each p tag
             pTags.forEach((pTag) => {
@@ -125,14 +117,34 @@ fetchChoice.addEventListener("click", async () => {
 
             // Loop through the breweries data
             data.forEach((brewery) => {
-                // Create a new paragraph element
-                const breweryInfo = document.createElement("p");
+                // Create a new div element for each brewery
+                const breweryItem = document.createElement("div");
+                breweryItem.style.borderRadius = "10px";
 
-                // Set the text content of the paragraph to include the name, address, and phone number
-                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, City: ${brewery.city}, Phone: ${brewery.phone}`;
+                // Create a new p tag inside the div for the name
+                const breweryName = document.createElement("p");
+                breweryName.textContent = brewery.name;
+                breweryItem.appendChild(breweryName);
 
-                // Append the paragraph to the div with id "list"
-                document.getElementById("list").appendChild(breweryInfo);
+                // Create a new p tag inside for the city
+                const breweryCity = document.createElement("p");
+                breweryCity.innerHTML = `${brewery.city}<br>`;
+                breweryItem.appendChild(breweryCity);
+
+                // Create a new p tag for the addy
+                const breweryAddress = document.createElement("p");
+                breweryAddress.innerHTML = `${brewery.street}<br>`;
+                breweryItem.appendChild(breweryAddress);
+
+                // Create a new p tag for the phone number
+                const breweryPhone = document.createElement("p");
+                breweryPhone.innerHTML = `${brewery.phone}<br>`;
+                breweryItem.appendChild(breweryPhone);
+                //styling for all the items being created and appended
+                breweryItem.classList.add("brewery-info", "custom-style");
+
+                // Append the brewery info to the list div
+                list.appendChild(breweryItem);
             });
         })
         .catch((error) => {
@@ -148,16 +160,12 @@ fetchChoice1.addEventListener("click", async () => {
     )
         .then((response) => response.json())
         .then((data) => {
-           
-           //removes images
-           const images = document.querySelectorAll('#image');
-           images.forEach(image => {
-               image.remove();
-           });
-           
-           
-           
-           
+            //removes images
+            const images = document.querySelectorAll("#image");
+            images.forEach((image) => {
+                image.remove();
+            });
+
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
@@ -170,25 +178,41 @@ fetchChoice1.addEventListener("click", async () => {
 
             // Loop through the breweries data
             data.forEach((brewery) => {
-                // Create a new paragraph element
-                const breweryInfo = document.createElement("p");
 
-                // Set the text content of the paragraph to include the name, address, and phone number
-                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, Phone: ${brewery.phone}`;
+                // Create a new div element for each brewery
+                const breweryItem = document.createElement("div");
+                breweryItem.style.borderRadius = "10px";
 
-                // Append the paragraph to the div with id "list"
-                document.getElementById("list").appendChild(breweryInfo);
+                // Create a new p tag inside the div for the name
+                const breweryName = document.createElement("p");
+                breweryName.textContent = brewery.name;
+                breweryItem.appendChild(breweryName);
+
+                // Create a new p tag inside for the city
+                const breweryCity = document.createElement("p");
+                breweryCity.innerHTML = `${brewery.city}<br>`;
+                breweryItem.appendChild(breweryCity);
+
+                // Create a new p tag for the addy
+                const breweryAddress = document.createElement("p");
+                breweryAddress.innerHTML = `${brewery.street}<br>`;
+                breweryItem.appendChild(breweryAddress);
+
+                // Create a new p tag for the phone number
+                const breweryPhone = document.createElement("p");
+                breweryPhone.innerHTML = `${brewery.phone}<br>`;
+                breweryItem.appendChild(breweryPhone);
+                //styling for all the items being created and appended
+                breweryItem.classList.add("brewery-info", "custom-style");
+
+                // Append the brewery info to the list div
+                list.appendChild(breweryItem);
             });
         })
         .catch((error) => {
             console.log(error);
         });
 });
-
-
-
-
-
 
 fetchChoice2.addEventListener("click", async () => {
     const name = "regional";
@@ -201,14 +225,12 @@ fetchChoice2.addEventListener("click", async () => {
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
-            
             //removes images
-            const images = document.querySelectorAll('#image');
-            images.forEach(image => {
+            const images = document.querySelectorAll("#image");
+            images.forEach((image) => {
                 image.remove();
             });
-            
-            
+
             // Remove each p tag
             pTags.forEach((pTag) => {
                 pTag.remove();
@@ -219,22 +241,40 @@ fetchChoice2.addEventListener("click", async () => {
             // Loop through the breweries data
             data.forEach((brewery) => {
                 // Create a new paragraph element
-                const breweryInfo = document.createElement("p");
+                // Create a new div element for each brewery
+                const breweryItem = document.createElement("div");
+                breweryItem.style.borderRadius = "10px";
 
-                // Set the text content of the paragraph to include the name, address, and phone number
-                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, Phone: ${brewery.phone}`;
+                // Create a new p tag inside the div for the name
+                const breweryName = document.createElement("p");
+                breweryName.textContent = brewery.name;
+                breweryItem.appendChild(breweryName);
 
-                // Append the paragraph to the div with id "list"
-                document.getElementById("list").appendChild(breweryInfo);
+                // Create a new p tag inside for the city
+                const breweryCity = document.createElement("p");
+                breweryCity.innerHTML = `${brewery.city}<br>`;
+                breweryItem.appendChild(breweryCity);
+
+                // Create a new p tag for the addy
+                const breweryAddress = document.createElement("p");
+                breweryAddress.innerHTML = `${brewery.street}<br>`;
+                breweryItem.appendChild(breweryAddress);
+
+                // Create a new p tag for the phone number
+                const breweryPhone = document.createElement("p");
+                breweryPhone.innerHTML = `${brewery.phone}<br>`;
+                breweryItem.appendChild(breweryPhone);
+                //styling for all the items being created and appended
+                breweryItem.classList.add("brewery-info", "custom-style");
+
+                // Append the brewery info to the list div
+                list.appendChild(breweryItem);
             });
         })
         .catch((error) => {
             console.log(error);
         });
 });
-
-
-
 
 fetchChoice3.addEventListener("click", async () => {
     const name = "corporate";
@@ -244,15 +284,12 @@ fetchChoice3.addEventListener("click", async () => {
     )
         .then((response) => response.json())
         .then((data) => {
-           
-           
-           //removes images
-           const images = document.querySelectorAll('#image');
-           images.forEach(image => {
-               image.remove();
-           });
-           
-           
+            //removes images
+            const images = document.querySelectorAll("#image");
+            images.forEach((image) => {
+                image.remove();
+            });
+
             // Select all the p tags inside the div with id "list"
             const pTags = document.querySelectorAll("#list p");
 
@@ -266,20 +303,40 @@ fetchChoice3.addEventListener("click", async () => {
             // Loop through the breweries data
             data.forEach((brewery) => {
                 // Create a new paragraph element
-                const breweryInfo = document.createElement("p");
+                // Create a new div element for each brewery
+                const breweryItem = document.createElement("div");
+                breweryItem.style.borderRadius = "10px";
 
-                // Set the text content of the paragraph to include the name, address, and phone number
-                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, Phone: ${brewery.phone}`;
+                // Create a new p tag inside the div for the name
+                const breweryName = document.createElement("p");
+                breweryName.textContent = brewery.name;
+                breweryItem.appendChild(breweryName);
 
-                // Append the paragraph to the div with id "list"
-                document.getElementById("list").appendChild(breweryInfo);
+                // Create a new p tag inside for the city
+                const breweryCity = document.createElement("p");
+                breweryCity.innerHTML = `${brewery.city}<br>`;
+                breweryItem.appendChild(breweryCity);
+
+                // Create a new p tag for the addy
+                const breweryAddress = document.createElement("p");
+                breweryAddress.innerHTML = `${brewery.street}<br>`;
+                breweryItem.appendChild(breweryAddress);
+
+                // Create a new p tag for the phone number
+                const breweryPhone = document.createElement("p");
+                breweryPhone.innerHTML = `${brewery.phone}<br>`;
+                breweryItem.appendChild(breweryPhone);
+                //styling for all the items being created and appended
+                breweryItem.classList.add("brewery-info", "custom-style");
+
+                // Append the brewery info to the list div
+                list.appendChild(breweryItem);
             });
         })
         .catch((error) => {
             console.log(error);
         });
 });
-
 
 fetchChoice4.addEventListener("click", async () => {
     const name = "contract";
@@ -291,14 +348,12 @@ fetchChoice4.addEventListener("click", async () => {
         .then((data) => {
             const pTags = document.querySelectorAll("#list p");
 
-           //removes images
-           const images = document.querySelectorAll('#image');
-           images.forEach(image => {
-               image.remove();
-           });
-           
-           
-           
+            //removes images
+            const images = document.querySelectorAll("#image");
+            images.forEach((image) => {
+                image.remove();
+            });
+
             // Remove each p tag
             pTags.forEach((pTag) => {
                 pTag.remove();
@@ -307,20 +362,39 @@ fetchChoice4.addEventListener("click", async () => {
 
             // Loop through the breweries data
             data.forEach((brewery) => {
-                // Create a new paragraph element
-                const breweryInfo = document.createElement("p");
+                // Create a new div element for each brewery
+                const breweryItem = document.createElement("div");
+                breweryItem.style.borderRadius = "10px";
 
-                // Set the text content of the paragraph to include the name, address, and phone number
-                breweryInfo.textContent = `Name: ${brewery.name}, Address: ${brewery.street}, Phone: ${brewery.phone}`;
+                // Create a new p tag inside the div for the name
+                const breweryName = document.createElement("p");
+                breweryName.textContent = brewery.name;
+                breweryItem.appendChild(breweryName);
 
-                // Append the paragraph to the div with id "list"
-                document.getElementById("list").appendChild(breweryInfo);
+                // Create a new p tag inside for the city
+                const breweryCity = document.createElement("p");
+                breweryCity.innerHTML = `${brewery.city}<br>`;
+                breweryItem.appendChild(breweryCity);
+
+                // Create a new p tag for the addy
+                const breweryAddress = document.createElement("p");
+                breweryAddress.innerHTML = `${brewery.street}<br>`;
+                breweryItem.appendChild(breweryAddress);
+
+                // Create a new p tag for the phone number
+                const breweryPhone = document.createElement("p");
+                breweryPhone.innerHTML = `${brewery.phone}<br>`;
+                breweryItem.appendChild(breweryPhone);
+                //styling for all the items being created and appended
+                breweryItem.classList.add("brewery-info", "custom-style");
+
+                // Append the brewery info to the list div
+                list.appendChild(breweryItem);
             });
         })
         .catch((error) => {
             console.log(error);
         });
 });
-
 
 //makeApiRequest(lat, lng);
