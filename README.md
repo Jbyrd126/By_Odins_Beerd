@@ -5,11 +5,8 @@ By Odin's Beer'd !
   <!-- Add badges using the following format: -->
   <!-- ![Name](urlToShieldHere)(urlToGithubHere) -->
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributors](https://img.shields.io/github/contributors/Jbyrd126/By_Odins_Beerd.git.svg?style=plastic&logo=appveyor)](https://github.com/Jbyrd126/By_Odins_Beerd.git/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/Jbyrd126/By_Odins_Beerd.gi.svg?style=plastic&logo=appveyor)](https://github.com/Jbyrd126/By_Odins_Beerd.git/network/members)
-[![Stargazers](https://img.shields.io/github/stars/Jbyrd126/By_Odins_Beerd.git.svg?style=plastic&logo=appveyor)](https://github.com/Jbyrd126/By_Odins_Beerd.git)
-[![Issues](https://img.shields.io/github/issues/Jbyrd126/By_Odins_Beerd.git.svg?style=plastic&logo=appveyor)](https://github.com/Jbyrd126/By_Odins_Beerd.git)
+[![Issues](https://img.shields.io/github/issues/Jbyrd126/By_Odins_Beerd.git.svg?style=plastic&logo=appveyor)](https://github.com/Jbyrd126/By_Odins_Beerd/issues)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)](https://linkedin.com/in/LinkedInUsername)
 
 </div>
@@ -25,7 +22,6 @@ By Odin's Beer'd     <br />
     <a href="https://github.com/Jbyrd126/By_Odins_Beerd.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Jbyrd126/By_Odins_Beerd.git">View Demo(Broken)</a>
     ·
     <a href="https://github.com/Jbyrd126/By_Odins_Beerd.git/issues">Report Bug</a>
     ·
@@ -90,7 +86,13 @@ By Odin's Beer'd using api
 
 ## Getting Started
 
-Once completely built, this application will function as a deployed app
+<p align="center">On Page Load</p>
+
+![Alt text](assets/images/load.png)
+
+<p align="center">After Making A Search Selection</p>
+
+![Alt text](assets/images/after.png)
 
 ### Installation
 
@@ -101,15 +103,15 @@ Once completely built, this application will function as a deployed app
 
 ## Usage
 
-Once the app is functional, screenshots will be added in this section.
+Search for nearby brewery types a certain distance away from users tagged location.
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-- [ ] get api data
-- [ ] print api data
-- [ ] style page
+- [x] get api data
+- [x] print api data
+- [x] style page
 
 See the [open issues] for a full list of proposed features (and known issues).
 
@@ -132,22 +134,38 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-This project is licensed under the MIT license.
-
-See LICENSE.txt for more information.
-
 <!-- CONTACT -->
 
 ## Contact
 
 Robert Byrd, Daniel Desta, Ryan Mcintyre
 
+<a href="mailto:Glurk33@gmail.com">Robert Byrd</a>
+
+<a href="tekoladaniel@gmail.com">Daniel Desta</a>
+
+<a href="rmcintyre598@gmail.com">Ryan Mcintyre</a>
+
 <!-- don't forget to add deployment link -->
 
 Project Link:
+
+<a href="https://github.com/Jbyrd126/By_Odins_Beerd">Github Repository</a>
 
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
-Readme templet given by TA
+<span style="font-size:2em">Readme template given by [Mary Elenius](https://maryelenius.com/)</span>
+
+<span style="font-size:2em">Moral and practical support via [John Dinsmore](https://twitter.com/JohnWDinsmore)</span>
+
+<span style="font-size:2em">Man, do I have questions! [Stack Overflow](https://stackoverflow.com/)</span>
+
+<span style="font-size:2em">Man, I have even more questions! [Google](https://www.google.com/)</span>
+
+<span style="font-size:2em">HAALLPPP!, I'm drowning over here! [&#129302;]()</span>
+
+<span style="font-size:2em">[Beer! Cause how is anything possible without a tall cold one!??!!!!](https://newglarusbrewing.com/pages/year-round-beers)</span>
+
+<span style="font-size:2em">[Beer! Cause how is anything possible without a tall cold one!??!!!!](https://newglarusbrewing.com/pages/year-round-beers)</span>
