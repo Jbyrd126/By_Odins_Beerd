@@ -32,9 +32,6 @@ h2 {
 
 }
 
-/* #choice {
-    font-family: "IM Fell English SC", serif;
-} */
 
 #logo {
     position: absolute;
@@ -47,7 +44,7 @@ h2 {
 .frog {
     color: #b56e2b;
     font-family: "IM Fell English SC", serif;
-    font-size: larger;
+
 
 }
 
@@ -71,13 +68,13 @@ h2 {
 
 .scarab {
     display: block;
-    margin-bottom: 10px;
+    margin-top: 10px;
 
 
     width: calc(71%);
     height: calc(65%);
     position: absolute;
-    top: 965px;
+    top: calc(75%);
 
 }
 
