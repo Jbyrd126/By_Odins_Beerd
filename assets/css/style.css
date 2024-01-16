@@ -1,93 +1,86 @@
 body {
-    display: block;
-    background-color: #eaac60;
-    width: 100vw;
-
+  display: block;
+  background-color: #eaac60;
+  width: 100vw;
 }
 
-
-
 h1 {
-    font-family: "IM Fell English SC", serif;
+  font-family: "IM Fell English SC", serif;
 
-    color: #b56e2b;
-    padding-left: 15px;
+  color: #b56e2b;
+  padding-left: 15px;
 }
 
 h2 {
-    font-family: "IM Fell English SC", serif;
-
+  font-family: "IM Fell English SC", serif;
 }
-
-
 
 #map {
-
-    height: 450px;
-    display: flex;
-    align-items: flex-end;
-    border-style: solid;
-    border-width: 1px;
-
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  border-style: solid;
+  border-width: 1px;
 }
 
-
 #logo {
-    /* position: absolute;
-    top: calc(-18%);
-    left: 50px; */
-
-    height: 800px;
+  position: relative;
+  top: -200px;
+  right: -500px;
+  height: 800px;
 }
 
 .frog {
-    color: #b56e2b;
-    font-family: "IM Fell English SC", serif;
+  color: #b56e2b;
+  font-family: "IM Fell English SC", serif;
+}
 
-
+.snake {
+  color: #b56e2b;
+  font-family: "IM Fell English SC", serif;
+  position: relative;
+  top: 50px;
+  left: 800px;
+}
+.snake:hover {
+  text-shadow: 0 0 20px #b56e2b;
 }
 
 .frog:hover {
-    text-shadow: 0 0 20px #b56e2b;
-
+  text-shadow: 0 0 20px #b56e2b;
 }
 
 .brewery-info {
-    display: block;
-    background-color: #1e293b;
-    font-size: 50px;
-    color: #b56e2b;
-    font-family: "IM Fell English SC", serif;
-    margin-top: 10px;
-    text-align: center;
-
-
-
+  display: block;
+  background-color: #1e293b;
+  font-size: 50px;
+  color: #b56e2b;
+  font-family: "IM Fell English SC", serif;
+  margin-top: 10px;
+  text-align: center;
 }
-
-
-
 
 .beetle {
-    background: url("../images/pensacola.jpg")top no-repeat, url("../images/pensacola2.jpg")bottom no-repeat;
-    background-size: 50%, 100%;
+  background: url("../images/pensacola.jpg") top no-repeat,
+    url("../images/pensacola2.jpg") bottom no-repeat;
+  background-size: 50%, 100%;
 
-
-
-    /* position: absolute; */
-
+  /* position: absolute; */
 }
-
+.flylessBeetle {
+  background: none;
+  background-size: 50%, 100%;
+}
 .custom-link {
-    text-decoration: none;
-    /* Add any other styles you want */
+  text-decoration: none;
+  /* Add any other styles you want */
 }
 
 .custom-link:hover {
-    text-shadow: 0 0 35px #b56e2b;
-    /* Add a text-shadow effect on hover */
+  text-shadow: 0 0 35px #b56e2b;
+  /* Add a text-shadow effect on hover */
 }
 
 #list {
-    position: relative;
+  position: relative;
 }
