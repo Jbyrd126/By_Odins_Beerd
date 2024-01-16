@@ -108,6 +108,7 @@ fetchChoice.addEventListener("click", async () => {
                 breweryWebsite.innerHTML = ` ${brewery.name}<br>`;
                 breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
                 breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryWebsite.classList.add('custom-link');
                 breweryItem.appendChild(breweryWebsite);
 
                 // Create a new p tag inside for the city
@@ -180,6 +181,7 @@ fetchChoice1.addEventListener("click", async () => {
                 breweryWebsite.innerHTML = ` ${brewery.name}<br>`;
                 breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
                 breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryWebsite.classList.add('custom-link');
                 breweryItem.appendChild(breweryWebsite);
 
                 // Create a new p tag inside for the city
@@ -254,6 +256,7 @@ fetchChoice2.addEventListener("click", async () => {
                 breweryWebsite.innerHTML = ` ${brewery.name}<br>`;
                 breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
                 breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryWebsite.classList.add('custom-link');
                 breweryItem.appendChild(breweryWebsite);
 
                 // Create a new p tag inside for the city
@@ -326,6 +329,7 @@ fetchChoice3.addEventListener("click", async () => {
                 breweryWebsite.innerHTML = ` ${brewery.name}<br>`;
                 breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
                 breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryWebsite.classList.add('custom-link');
                 breweryItem.appendChild(breweryWebsite);
 
                 // Create a new p tag inside for the city
@@ -391,7 +395,6 @@ fetchChoice4.addEventListener("click", async () => {
             data.forEach((brewery) => {
                 // Create a new div element for each brewery
                 const breweryItem = document.createElement("div");
-                breweryItem.classList.add("#test")
                 breweryItem.style.borderRadius = "10px";
 
                 const breweryWebsite = document.createElement('a');
