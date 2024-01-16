@@ -378,7 +378,7 @@ fetchChoice4.addEventListener("click", async () => {
             pTags.forEach((pTag) => {
                 pTag.remove();
             });
-
+            5
             aTags.forEach((aTag) => {
                 aTag.remove();
             });
@@ -428,4 +428,4 @@ fetchChoice4.addEventListener("click", async () => {
         });
 });
 
-
+//makeApiRequest(lat, lng);

@@ -33,9 +33,7 @@ h2 {
 
 
 #logo {
-    /* position: absolute;
-    top: calc(-18%);
-    left: 50px; */
+
 
     height: 800px;
 }
@@ -43,11 +41,27 @@ h2 {
 .frog {
     color: #b56e2b;
     font-family: "IM Fell English SC", serif;
+    bottom: 600px;
 
 
 }
 
 .frog:hover {
+    text-shadow: 0 0 20px #b56e2b;
+
+}
+
+.snake {
+    color: #b56e2b;
+    font-family: "IM Fell English SC", serif;
+    position: relative;
+    top: 50px;
+    right: 70px;
+
+
+}
+
+.snake:hover {
     text-shadow: 0 0 20px #b56e2b;
 
 }
