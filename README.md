@@ -167,5 +167,3 @@ Project Link:
 <span style="font-size:2em">HAALLPPP!, I'm drowning over here! [&#129302;]()</span>
 
 <span style="font-size:2em">[Beer! Cause how is anything possible without a tall cold one!??!!!!](https://newglarusbrewing.com/pages/year-round-beers)</span>
-
-<span style="font-size:2em">[Beer! Cause how is anything possible without a tall cold one!??!!!!](https://newglarusbrewing.com/pages/year-round-beers)</span>
