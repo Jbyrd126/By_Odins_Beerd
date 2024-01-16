@@ -1,6 +1,7 @@
 body {
     display: block;
     background-color: #eaac60;
+    width: 100vw;
 
 }
 
@@ -32,10 +33,10 @@ h2 {
 
 
 #logo {
-    position: absolute;
+    /* position: absolute;
     top: calc(-18%);
-    left: 50px;
-    width: 0px;
+    left: 50px; */
+
     height: 800px;
 }
 
@@ -64,24 +65,17 @@ h2 {
 
 }
 
-.scarab {
-    display: block;
-    margin-top: 10px;
 
 
-    width: calc(71%);
-    height: calc(65%);
-    position: absolute;
-    top: calc(75%);
-
-}
 
 .beetle {
-    display: block;
-    width: calc(71%);
-    height: calc(65%);
-    position: absolute;
-    margin-bottom: 10px;
+    background: url("../images/pensacola.jpg")top no-repeat, url("../images/pensacola2.jpg")bottom no-repeat;
+    background-size: 50%, 100%;
+
+
+
+    /* position: absolute; */
+
 }
 
 .custom-link {
@@ -92,4 +86,8 @@ h2 {
 .custom-link:hover {
     text-shadow: 0 0 35px #b56e2b;
     /* Add a text-shadow effect on hover */
+}
+
+#list {
+    position: relative;
 }
