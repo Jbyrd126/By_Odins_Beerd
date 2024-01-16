@@ -338,6 +338,7 @@ fetchChoice3.addEventListener("click", async () => {
 });
 
 fetchChoice4.addEventListener("click", async () => {
+
   const name = "contract";
   console.log(name);
   fetch(
@@ -404,3 +405,77 @@ fetchChoice4.addEventListener("click", async () => {
       console.log(error);
     });
 });
+
+    const name = "contract";
+    console.log(name);
+    fetch(
+        `https://api.openbrewerydb.org/v1/breweries?by_type=contract&by_dist=${lat},${lng}&per_page=8`
+    )
+        .then((response) => response.json())
+        .then((data) => {
+
+            const pTags = document.querySelectorAll("#list p");
+            const aTags = document.querySelectorAll('#list a');
+
+            //removes images
+            const images = document.querySelectorAll("#image1,#image2");
+            images.forEach((image) => {
+                image.remove();
+            });
+
+            // Remove each p tag
+            pTags.forEach((pTag) => {
+                pTag.remove();
+            });
+            5
+            aTags.forEach((aTag) => {
+                aTag.remove();
+            });
+            initMap(lat, lng, data);
+
+            // Loop through the breweries data
+            data.forEach((brewery) => {
+                // Create a new div element for each brewery
+                const breweryItem = document.createElement("div");
+                breweryItem.style.borderRadius = "10px";
+
+                const breweryWebsite = document.createElement('a');
+                breweryWebsite.innerHTML = ` ${brewery.name}<br>`;
+                breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
+                breweryWebsite.target = '_blank'; // Open the link in a new tab
+                breweryWebsite.classList.add('custom-link');
+                breweryItem.appendChild(breweryWebsite);
+
+                // Create a new p tag inside for the city
+                const breweryCity = document.createElement("p");
+                breweryCity.innerHTML = `${brewery.city}<br>`;
+                breweryItem.appendChild(breweryCity);
+
+                // Create a new p tag for the addy
+                const breweryAddress = document.createElement("p");
+                breweryAddress.innerHTML = `${brewery.street}<br>`;
+                breweryItem.appendChild(breweryAddress);
+
+                // Create a new p tag for the phone number
+                const breweryPhone = document.createElement("p");
+                breweryPhone.innerHTML = `${brewery.phone}<br>`;
+                breweryItem.appendChild(breweryPhone);
+                //styling for all the items being created and appended
+                breweryItem.classList.add("brewery-info", "custom-style");
+
+
+
+                // Styling for all the items being created and appended
+                breweryItem.classList.add('brewery-info',);
+
+                // Append the brewery info to the list div
+                list.appendChild(breweryItem);
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+});
+
+//makeApiRequest(lat, lng);
+

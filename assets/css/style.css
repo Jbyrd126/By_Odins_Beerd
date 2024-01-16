@@ -24,6 +24,7 @@ h2 {
 }
 
 #logo {
+
   position: relative;
   top: -200px;
   right: -500px;
@@ -34,6 +35,18 @@ h2 {
   color: #b56e2b;
   font-family: "IM Fell English SC", serif;
 }
+
+
+
+    height: 800px;
+}
+
+.frog {
+    color: #b56e2b;
+    font-family: "IM Fell English SC", serif;
+    bottom: 600px;
+
+
 
 .snake {
   color: #b56e2b;
@@ -48,6 +61,21 @@ h2 {
 
 .frog:hover {
   text-shadow: 0 0 20px #b56e2b;
+}
+
+.snake {
+    color: #b56e2b;
+    font-family: "IM Fell English SC", serif;
+    position: relative;
+    top: 50px;
+    right: 70px;
+
+
+}
+
+.snake:hover {
+    text-shadow: 0 0 20px #b56e2b;
+
 }
 
 .brewery-info {
