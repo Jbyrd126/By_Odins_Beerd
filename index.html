@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -16,126 +16,112 @@
     <title>By Odin's Beer'd</title>
 </head>
 
-
-<body class=" ">
-
+<body>
     <header class="text-white py-4 bg-gradient-to-r from-slate-900 from-10% via-gray-600 via-30% to-transparent to-70%">
-        <div class="container mx-1 px-4 ">
-            <h1 class="text-6xl">Let's get sloshed <span><a href="egg.html">frændi</a></span>!</h1>
-
+        <div class="container mx-1 px-4">
+            <h1 class="text-6xl">
+                Let's get sloshed <span><a href="egg.html">frændi</a></span>!
+            </h1>
         </div>
     </header>
 
-    <div class="">
-        <div class=" flex cols-3 gap-2 mt-2">
-            <div class="col-span-1 p-4 w-1/4">
-                <h2 class="text-2xl font-bold text-center text-slate-800	">Fancy a pint and a sausage?</h2>
-                <div class="my-3">
-                    <button id="choice"
-                        class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-full h-20">
-                        Brewpub
+    <div class="flex flex-row flex-wrap mt-2">
+        <div class="basis-1/3 p-1">
+            <h2 class="text-2xl font-bold text-center text-slate-800">
+                Fancy a pint and a sausage?
+            </h2>
+            <div class="my-3">
+                <button id="choice"
+                    class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 rounded-2xl mt-2 w-full h-20">
+                    Brewpub
+                </button>
+                <div>
+                    <h2 class="text-2xl font-bold text-center text-slate-800">
+                        Let's go to the Winchester, have a nice cold pint, and wait for
+                        all of this to blow over.
+                    </h2>
+                    <button id="choice1"
+                        class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 rounded-2xl mt-2 w-full h-20">
+                        Micro Brewery
                     </button>
-                    <div>
-                        <h2 class="text-2xl font-bold text-center text-slate-800">Let's go to the Winchester, have a
-                            nice cold pint, and wait for all of this to blow over.
-                        </h2>
-                        <button id="choice1"
-                            class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 px-4 rounded-2xl mt-2 w-full h-20">
-                            Micro Brewery
-                        </button>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-center text-slate-800	">Not all those who wander are lost...
-                        </h2>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-center text-slate-800">
+                        Not all those who wander are lost...
+                    </h2>
 
-                        <button id="choice2"
-                            class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 rounded-2xl mt-2 w-full h-20">
-                            Regional Brewery
-                        </button>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-center text-slate-800	">How big a guy are ya!!!???!!</h2>
-                        <button id="choice3"
-                            class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-full h-20">
-                            Corporate Brewery
-                        </button>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-center text-slate-800	">Him just a wittle guy...</h2>
-                        <button id="choice4"
-                            class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 rounded-2xl mt-2 w-full h-20">
-                            Startup Brewery
-                        </button>
-                    </div>
-
-                    <div class="container mx-auto my-3 px-5">
-                        <div id="map" class="container mx-auto  rounded-2xl"></div>
-                    </div>
+                    <button id="choice2"
+                        class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 rounded-2xl mt-2 w-full h-20">
+                        Regional Brewery
+                    </button>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-center text-slate-800">
+                        How big a guy are ya!!!???!!
+                    </h2>
+                    <button id="choice3"
+                        class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 rounded-2xl mt-2 w-full h-20">
+                        Corporate Brewery
+                    </button>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-center text-slate-800">
+                        Him just a wittle guy...
+                    </h2>
+                    <button id="choice4"
+                        class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold p-2 rounded-2xl mt-2 w-full h-20">
+                        Startup Brewery
+                    </button>
                 </div>
 
-
-            </div>
-            <div id="list" class="col-span-2 p-2 w-1/2">
-
-
-
-                <img id="image1" class="beetle rounded-lg" src="assets/images/PensacolaBayBrewery(41).jpg"
-                    alt="Placeholder Image 1">
-                <img id="image2" class="scarab rounded-lg" src="assets/images/PensacolaBayBrewery(46).jpg"
-                    alt="Placeholder Image 2">
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-            <div id="mole" class="col-span-1 p-4 w-1/4"
-                style="position: relative; display: flex; flex-wrap: column; justify-content: center;">
-                <div id="logo" class="col-span-2 bg-no-repeat bg-center w-1/4"
-                    style="width: 100%; z-index: 999; background-image: url(assets/images/By-Odinos-Beerd.png); padding: 5px; background-size: contain;">
+                <div class="container mx-auto my-3 px-5">
+                    <div id="map" class="container mx-auto rounded-2xl"></div>
                 </div>
-                <button
-                    class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-2/3 h-20"
-                    onclick="location.href='https://www.google.com'"
-                    style="position: absolute; top: 655px; ">Daniel</button>
-                <button
-                    class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-2/3 h-20"
-                    onclick="location.href='https://github.com/rmac598'"
-                    style="position: absolute; top: 810px;">Ryan</button>
-                <button
-                    class=" frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-2/3 h-20"
-                    onclick="location.href='rob.html'" style="position: absolute; top: 970px;">Rob</button>
             </div>
         </div>
+        <div class="beetle flex flex-row flex-wrap basis-2/3 p-1">
 
-
-
-
-
+            <div id="list" class="basis-1/2">
+            </div>
+            <div id="mole" class="basis-1/2">
+                <!-- <div class="" style="
+              position: relative;
+              display: flex;
+              flex-wrap: column;
+              justify-content: center;
+            "> -->
+                <div id="logo" class="col bg-no-repeat w-1/4" style="
+                width: 100%;
+                z-index: 999;
+                position: relative;
+                background-image: url(assets/images/By-Odinos-Beerd.png);
+                padding: 5px;
+                background-size: contain;
+              "></div>
+                <button
+                    class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-2/3 h-20"
+                    onclick="location.href='https://www.google.com'" style="">
+                    Daniel
+                </button>
+                <button
+                    class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-2/3 h-20"
+                    onclick="location.href='https://github.com/rmac598'" style="">
+                    Ryan
+                </button>
+                <button
+                    class="frog bg-slate-900 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-50 text-5xl font-bold py-2 px-4 rounded-2xl mt-2 w-2/3 h-20"
+                    onclick="location.href='rob.html'" style="">
+                    Rob
+                </button>
+            </div>
+            <!-- </div> -->
+        </div>
     </div>
 
-    </div>
-
-
-
-
-
-
-
-
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuUcFNsb6taVvWzdtzslQostyDOlc-U1c" defer>
-    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuUcFNsb6taVvWzdtzslQostyDOlc-U1c"
+        defer></script>
 
     <script src="./assets/js/script.js"></script>
-
-
 </body>
 
 </html>

@@ -2,14 +2,7 @@ let map;
 let lat;
 let lng;
 let markers = [];
-// function removeMarkers() {
-//   for (let index = 0; index < markers.length; index++) {
-//     markers[index].setMap(null);
-//   }
-//   console.log(markers);
-// }
-// locate you.
-//google maps functionality
+
 function initMap(latitude, longitude, breweries = null) {
     console.log(latitude, longitude);
     map = new google.maps.Map(document.getElementById("map"), {
@@ -18,12 +11,12 @@ function initMap(latitude, longitude, breweries = null) {
     });
     //adding home marker
     if (breweries) {
-        console.log(`breweries ${breweries}`);
+        console.log(breweries);
         breweries.forEach((brewery) => {
             // Extract latitude and longitude coordinates
             const { latitude, longitude } = brewery;
 
-            // Create a new marker for each brewery location
+            // Create a new marker for each brewery location, thanks John!
             new google.maps.Marker({
                 position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
                 map: map, // Add the marker to the map
@@ -435,4 +428,4 @@ fetchChoice4.addEventListener("click", async () => {
         });
 });
 
-//makeApiRequest(lat, lng);
+
