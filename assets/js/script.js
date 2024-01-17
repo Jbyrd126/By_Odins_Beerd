@@ -94,6 +94,7 @@ fetchChoice.addEventListener("click", async () => {
                 const breweryItem = document.createElement("div");
                 breweryItem.style.borderRadius = "10px";
 
+
                 const breweryWebsite = document.createElement("a");
                 breweryWebsite.innerHTML = ` ${brewery.name}<br>`;
                 breweryWebsite.href = brewery.website_url; // Set the href attribute to the brewery website URL
@@ -119,6 +120,7 @@ fetchChoice.addEventListener("click", async () => {
                 //styling for all the items being created and appended
                 console.log(breweryItem);
                 breweryItem.classList.add("brewery-info");
+                // breweryItem.style.marginTop = "20px";
 
                 // Append the brewery info to the list div
                 list.appendChild(breweryItem);

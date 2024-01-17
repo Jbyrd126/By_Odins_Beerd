@@ -23,14 +23,6 @@ h2 {
     border-width: 1px;
 }
 
-#logo {
-
-    position: relative;
-    top: -300;
-    right: 0;
-
-}
-
 .frog {
     color: #b56e2b;
     font-family: "IM Fell English SC", serif;
@@ -42,42 +34,30 @@ h2 {
     bottom: 600px;
 }
 
-
-
-.snake {
-    color: #b56e2b;
-    font-family: "IM Fell English SC", serif;
-    position: relative;
-    top: 25%;
-    left: 50px;
-}
-
-.snake:hover {
-    text-shadow: 0 0 20px #b56e2b;
-}
-
 .frog:hover {
     text-shadow: 0 0 20px #b56e2b;
 }
 
-
-
 .brewery-info {
+    width: 75%;
     display: block;
-    background-color: #1e293b;
-    font-size: 50px;
+    background-color: #0f172a;
+    font-size: 25px;
     color: #b56e2b;
     font-family: "IM Fell English SC", serif;
-    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
     text-align: center;
+
 }
 
 .beetle {
     background: url("../images/pensacola.jpg") top no-repeat,
         url("../images/pensacola2.jpg") bottom no-repeat;
-    background-size: 50%, 100%;
 
-    /* position: absolute; */
+    background-position: top;
+    background-size: 100% 100%;
+    margin-top: 2.2%;
 }
 
 .flylessBeetle {
@@ -87,14 +67,36 @@ h2 {
 
 .custom-link {
     text-decoration: none;
-    /* Add any other styles you want */
 }
 
 .custom-link:hover {
     text-shadow: 0 0 35px #b56e2b;
-    /* Add a text-shadow effect on hover */
 }
 
-#list {
+.snake {
+    color: #b56e2b;
+    font-family: "IM Fell English SC", serif;
+}
+
+.snake:hover {
+    text-shadow: 0 0 20px #b56e2b;
+}
+
+#logo {
     position: relative;
+    height: 400px;
+    width: 400px;
+    z-index: 999;
+    top: -15%;
+    left: 75%;
+    transform: translateX(-50%);
+    background-image: url("../images/By-Odinos-Beerd.png");
+    background-size: contain;
+}
+
+#spider {
+    position: absolute;
+    bottom: 1%;
+    right: -1%;
+
 }
